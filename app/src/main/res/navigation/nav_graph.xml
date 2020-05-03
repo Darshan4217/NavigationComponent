@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.darshan.navigationcomponent.FirstFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_first_fragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.darshan.navigationcomponent.SecondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue="No message" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="No title" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.darshan.navigationcomponent.ThirdFragment"
+        android:label="Third Fragment"
+        tools:layout="@layout/fragment_third" />
+</navigation>
